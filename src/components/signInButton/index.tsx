@@ -9,6 +9,7 @@ export function SignInButton() {
   const { data: session } = useSession(); //Essa implementação já mudou desde a aula da rocketseat
   return session ? (
     <button
+      type="button"
       className={styles.signInButton}
       onClick={() => signOut()}
     >
@@ -22,6 +23,7 @@ export function SignInButton() {
     </button>
   ) : (
       <button
+        type="button"
         className={styles.signInButton}
         onClick={() => signIn('github')}
       >
